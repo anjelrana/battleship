@@ -1,4 +1,4 @@
-var randomLoc = Math.floor(Math.random() * 5);
+var randomLoc = Math.floor(Math.random() * 5 +1 );
 var locationOne = randomLoc;
 var locationTwo = locationOne + 1;
 var locationThree = locationTwo + 1;
@@ -12,26 +12,31 @@ while (isSunk === false) {
     guess = prompt("Enter your 1-D coordinate between 0 to 6");
 
     if (guess === null) {
+        guesses = 0;
         alert("we are ending the game!");
         isSunk = true;
     } else if (guess >= 0 && guess < 7) {
-
+         
         guesses++;
-        if (guess === locationOne || guess === locationTwo || guess === locationThree) {
+        if (Number(guess) === locationOne || Number(guess) === locationTwo || Number(guess) === locationThree) {
+            alert("hit");
             hits++;
+            if (hits === 3) {
+                alert("you have sunken the ship");
+                isSunk = true;
+            }
+
+
             if (guess === location) {
                 locationOne = false;
             } else if (guess === locationTwo) {
                 locationTwo = false;
             } else if (guess === locationThree) {
                 locationThree = false;
-            }
-            if (hits === 3) {
-                alert("you have sunken the ship");
-                isSunk = true;
             } else {
-                alert("hit");
+                console.log(randomLoc);
             }
+            
         } else {
             alert("miss")
         }
