@@ -9,13 +9,13 @@ var hits = 0;
 var isSunk = false;
 
 while (isSunk === false) {
-    guess = prompt("Enter your 1-D coordinate between 0 to 6");
+    guess = prompt("Enter your 1-D coordinate between 1 to 7");
 
     if (guess === null) {
         guesses = 0;
         alert("we are ending the game!");
         isSunk = true;
-    } else if (guess >= 0 && guess < 7) {
+    } else if (guess > 0 && guess <= 7) {
          
         guesses++;
         if (Number(guess) === locationOne || Number(guess) === locationTwo || Number(guess) === locationThree) {
