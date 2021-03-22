@@ -1,14 +1,101 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
     <head>
-        <title>Battleship Game</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=2.0">
-        <link href="style.css" rel="stylesheet" type="text/css">
+        <title>BattleShip</title>
+        <meta content="width=device-width, initial-scale=1.0, fit-to-shrink=no" name="viewport">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1>Play Battleship!</h1>
-        <script src="index.js"></script>
+        <div class="grid-table">
+            <div class="grid-row">
+                <div class="grid-cell-header1">A</div>
+                <div class="grid-cell " id="00"></div>
+                <div class="grid-cell" id="01"></div>
+                <div class="grid-cell" id="02"></div>
+                <div class="grid-cell" id="03"></div>
+                <div class="grid-cell" id="04"></div>
+                <div class="grid-cell" id="05"></div>
+                <div class="grid-cell" id="06"></div>
 
+            </div>
+            <div class="grid-row">
+                <div class="grid-cell-header1">B</div>
+                <div class="grid-cell" id="10"></div>
+                <div class="grid-cell" id="11"></div>
+                <div class="grid-cell " id="12"></div>
+                <div class="grid-cell " id="13"></div>
+                <div class="grid-cell" id="14"></div>
+                <div class="grid-cell" id="15"></div>
+                <div class="grid-cell" id="16"></div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-cell-header1">C</div>
+                <div class="grid-cell" id="20"></div>
+                <div class="grid-cell" id="21"></div>
+                <div class="grid-cell" id="22"></div>
+                <div class="grid-cell" id="23"></div>
+                <div class="grid-cell" id="24"></div>
+                <div class="grid-cell " id="25"></div>
+                <div class="grid-cell " id="26"></div>
+            </div>
+          
+            <div class="grid-row">
+                <div class="grid-cell-header1">D</div>
+                <div class="grid-cell" id="30"></div>
+                <div class="grid-cell" id="31"></div>
+                <div class="grid-cell" id="32"></div>
+                <div class="grid-cell" id="33"></div>
+                <div class="grid-cell " id="34"></div>
+                <div class="grid-cell" id="35"></div>
+                <div class="grid-cell" id="36"></div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-cell-header1">E</div>
+                <div class="grid-cell" id="40"></div>
+                <div class="grid-cell" id="41"></div>
+                <div class="grid-cell" id="42"></div>
+                <div class="grid-cell" id="43"></div>
+                <div class="grid-cell" id="44"></div>
+                <div class="grid-cell" id="45"></div>
+                <div class="grid-cell" id="46"></div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-cell-header1">F</div>
+                <div class="grid-cell" id="50"></div>
+                <div class="grid-cell" id="51"></div>
+                <div class="grid-cell" id="52"></div>
+                <div class="grid-cell" id="53"></div>
+                <div class="grid-cell" id="54"></div>
+                <div class="grid-cell " id="55"></div>
+                <div class="grid-cell" id="56"></div>
+            </div>  <div class="grid-row">
+                <div class="grid-cell-header1" >G</div>
+                <div class="grid-cell" id="60"></div>
+                <div class="grid-cell" id="61"></div>
+                <div class="grid-cell" id="62"></div>
+                <div class="grid-cell" id="63"></div>
+                <div class="grid-cell" id="64"></div>
+                <div class="grid-cell" id="65"></div>
+                <div class="grid-cell " id="66"></div>
+            </div>
+            <div class="grid-row">
+                <div></div>
+                <div class="grid-cell-header">0</div>
+                <div class="grid-cell-header">1</div>
+                <div class="grid-cell-header">2</div>
+                <div class="grid-cell-header">3</div>
+                <div class="grid-cell-header">4</div>
+                <div class="grid-cell-header">5</div>
+                <div class="grid-cell-header">6</div>
+                
+            </div>
+        </div>
+        <div class="message">Start the Game</div>
+    <div class="inputfield">
+        <input type="text" maxlength="2" pattern="[A-G]{1}[0-6]{1}" id="coordinate-value">
+        <button class="button-fire" >Fire!</button>
+    </div>
+    <script src="app.js"></script>
     </body>
 </html>

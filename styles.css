@@ -1,0 +1,117 @@
+:root {
+    --border-color:rgb(43, 209, 43);
+}
+body {
+    background-image: url(images/background.png);
+    background-attachment: fixed;
+    background-size: 50%;
+    background-color: black;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    color:rgb(43, 209, 43);
+
+}
+/* grid stucture layout    */
+
+.grid-table {
+    display: table;
+    border-collapse: collapse;
+    
+    width:70%;
+    margin: auto;
+
+}
+.grid-row {
+    display: table-row;
+    
+    
+}
+.grid-cell {
+    display: table-cell;
+    padding:1.9rem;
+    border:1.5px var(--border-color,green) solid;
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    background: rgba(43, 209, 43,0.3);
+}
+
+.grid-cell-header {
+    display: table-cell;
+    padding:1rem;
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    border-color: var(--border-color,green) var(--border-color,green) transparent var(--border-color,green);
+    border-style: solid;
+    border-width: 1px;
+    vertical-align: text-top;
+    text-align: center;
+}
+
+.grid-cell-header1 {
+    display: table-cell;
+    padding:1rem;
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    border-color: var(--border-color,green) var(--border-color,green)  var(--border-color,green) transparent;
+    border-style: solid;
+    border-width: 1px;
+    text-align: end;
+}
+.inputfield {
+    position: sticky;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    background: var(--border-color,green);
+    width: 16%;
+    padding: 0.2rem;
+    border-radius: 3px;
+    margin-left:80vw ;
+}
+
+input[type="text"] {
+    background-color: green;
+    border: none;
+    color: navajowhite;
+    
+}
+
+input[type="text"]:invalid {
+border: 1px red solid;
+}
+
+.button-fire{
+    background: linear-gradient(red, yellow);
+ border: solid 1px green;
+ color: purple;
+ padding: 5px 10px;
+ cursor:pointer;
+
+}
+.message {
+    position:fixed;
+    background: rgb(43, 209, 43,0.2);
+    width:14%;
+    top:30%;
+    font: normal normal bold 1.3rem/2 monospace;
+    text-align:center;
+        border: 1px var(--border-color,green) solid;
+    z-index: 10;
+
+
+}
+
+/* miss and hit  */
+
+.miss {
+    background: url(images/miss.png) no-repeat center center ;
+    background-size: 80%;
+}
+
+.hit {
+    background: url(images/ship-correct.png) no-repeat center center;
+    background-size: 90%;
+}
